@@ -24,7 +24,7 @@ library project Databases is
       for Switches ("Ada") use ("-s", "-j8", "-g");
    end Builder;
 
-   for Library_Version use "0.1.0";
+   for Library_Version use "libdatabases.so.0.1.0";
 
 end Databases;
 
