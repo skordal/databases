@@ -1,0 +1,27 @@
+--  Databases - A simple database library for Ada applications
+--  (c) Kristian Klomsten Skordal 2019 <kristian.skordal@wafflemail.net>
+--  Report bugs and issues on <https://github.com/skordal/databases/issues>
+--  vim:ts=3:sw=3:et:si:sta
+
+with "databases.gpr";
+
+project Databases.Tests is
+
+   for Languages use ("Ada");
+
+   for Exec_Dir use "bin";
+   for Object_Dir use "obj";
+
+   for Source_Dirs use ("tests");
+   for Main use ("testapp.adb");
+
+   package Compiler is
+      for Switches ("Ada") use ("-g", "-gnat12", "-gnata", "-gnatf", "-gnatwa");
+   end Compiler;
+
+   package Builder is
+      for Switches ("Ada") use ("-s", "-j8", "-g");
+   end Builder;
+
+end Databases.Tests;
+

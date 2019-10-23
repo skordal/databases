@@ -1,0 +1,14 @@
+--  Databases - A simple database library for Ada applications
+--  (c) Kristian Klomsten Skordal 2019 <kristian.skordal@wafflemail.net>
+--  Report bugs and issues on <https://github.com/skordal/databases/issues>
+--  vim:ts=3:sw=3:et:si:sta
+
+project Sqlite is
+
+   for Externally_Built use "True";
+   for Library_Dir use "/usr/lib64";
+   for Library_Kind use "dynamic";
+   for Library_Name use "sqlite3";
+
+end Sqlite;
+
